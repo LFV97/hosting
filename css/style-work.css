@@ -1,0 +1,142 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    background-color: bisque;
+    margin: 10px auto;
+    width: 99vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .gallery-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 70vh;
+    margin: auto;
+  }
+  
+  .item {
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    transition: flex 0.8s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .item:hover {
+    flex: 7;
+  }
+  
+  .item:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(49, 49, 49, 0.5);
+    z-index: 1;
+  }
+  
+  .item:hover span {
+    position: absolute;
+    display: flex;
+    text-decoration: underline;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .item:hover .btn {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    background-color: #f5d6a8;
+    color: #222;
+    border-radius: 4px;
+    top: 60%;
+    left: 50%;
+    z-index: 1;
+  }
+  
+  .item:hover .btn:hover {
+    background-color: #c7ae89;
+    cursor: pointer;
+  }
+  
+  .item span,
+  .btn {
+    display: none;
+  }
+  
+  /* Estilos responsive */
+  
+  @media (max-width: 768px) {
+    .container {
+      height: auto;
+      padding: 10px;
+    }
+
+    .gallery-wrap {
+      display: flex;
+      flex-direction: row;
+      width: 80%;
+      height: 70vh;
+      margin: auto;
+    }
+  
+    .item {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (min-width: 300px) and (max-width: 768px) {
+    .container {
+      height: 50vh;
+      padding: 10px;
+      margin: auto;
+    }
+  
+    .gallery-wrap {
+      width: 80%;
+      height: 100%;
+      margin: auto;
+      margin-left: 15%;
+    }
+  
+    .item {
+      height: 40vh;
+    }
+
+    span {
+      font-size: 0.8rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      margin-top: 50px;
+      width: 100px;
+      height: 60px;
+      font-size: 0.72rem;
+    }
+  }
+  

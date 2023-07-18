@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos del encabezado */
+  header {
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    box-shadow: 0px 5px 15px 1px #777777;
+    padding: 40px 0;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    min-height: 50vh;
+  }
+  
+  .header-container {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  
+  .header-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  img {
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  .avatar-about img {
+    max-width: 50%;
+  }
+
+  .header-text {
+    margin-top: 20px;
+  }
+  
+  h1 {
+    font-weight: bolder;
+    font-size: 4rem;
+  }
+  
+  h3 {
+    font-size: 2rem;
+  }
+  
+  p {
+    font-size: 1.3rem;
+  }
+  
+  .avatar {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  /* Estilos del contenido principal */
+  .container-tech {
+    width: 90%;
+    max-width: 900px;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    margin-top: 50px;
+  }
+  
+  .container-left,
+  .container-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    justify-items: center;
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    
+    
+    .container-tech {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 20px;
+      padding: 30px;
+    }
+
+    .container-left,
+    .container-right {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      justify-items: center;
+      font-size: 1.2rem;
+    }
+
+
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+    .container-tech {
+        grid-template-columns: 1fr;
+        margin: auto;
+        margin-bottom: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        width: 50%;
+        margin: auto;
+        margin-right: 25%;
+    }
+
+    
+    .header {
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+        text-align: justify;
+        min-height: 25vh;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+      }
+      
+      h3 {
+        font-size: 1.2rem;
+      }
+      
+      p {
+        font-size: 1rem;
+      }
+  }
+  
+  .title-tech {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  /* LANGUAGES LEARNING */
+  .learning {
+    font-style: italic;
+  }
+  
